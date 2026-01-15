@@ -99,5 +99,5 @@ description: 描述此 skill 的用途與觸發時機
 ## 🔗 參考資料
 
 - [Agent Skills 開放標準](https://agentskills.io/specification)
-- [Claude Code Skills 教學](https://kaochenlong.com/claude-code-skills)
+- [高見龍 Claude Code Skills：讓 AI 變身專業工匠](https://kaochenlong.com/claude-code-skills)
 - [Anthropic 官方文件](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)

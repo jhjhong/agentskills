@@ -34,26 +34,32 @@ AI 輔助生成標準化的 Git Commit Message，支援多種 AI Coding Assistan
 
 ## 🚀 部署方式
 
-### 一：Agent Skills（推薦）
+### 方法一：Agent Skills（推薦）
 
-將 `SKILL.md` 複製到對應的 skills 目錄：
+執行 repo 根目錄的 `deploy.sh` 即可自動部署。
 
-| AI Agent | 個人層級路徑 |
-|----------|-------------|
-| Gemini Code Assist (Antigravity) | `~/.gemini/skills/git-commit-helper/` |
-| Claude Code | `~/.claude/skills/git-commit-helper/` |
+```bash
+cd ../..
+./deploy.sh
+```
+
+若需手動部署：
 
 ```bash
 # Gemini / Antigravity
-cp -r git-commit-helper ~/.gemini/skills/
+ln -s "$(pwd)" ~/.gemini/skills/git-commit-helper
+# or
+cp -r . ~/.gemini/skills/git-commit-helper/
 
-# Claude
-cp -r git-commit-helper ~/.claude/skills/
+# Claude Code
+ln -s "$(pwd)" ~/.claude/skills/git-commit-helper
+# or
+cp -r . ~/.claude/skills/git-commit-helper/
 ```
 
 ---
 
-### 二：IDE 設定檔（Source Control Generate 按鈕）
+### 方法二：IDE 設定檔（Source Control Generate 按鈕）
 
 讓 **VSCode / Cursor / Antigravity** 側邊欄的 **Generate** 按鈕也遵循此格式：
 
@@ -99,13 +105,3 @@ When generating git commit messages, follow these rules:
 編輯專案根目錄的 `.cursorrules` 或 `~/.cursor/rules`，加入相同內容。
 
 ---
-
-## ✅ 驗證
-
-設定完成後：
-
-1. **對話模式**：說「commit」或「幫我提交」，AI 會自動分析 `git diff --staged` 並生成格式化的 commit message
-
-2. **側邊欄 Generate**：在 Source Control 面板點擊 **Generate** 按鈕，應生成符合規範的英文 + emoji commit message
-
-> **提示**：可能需要重新載入編輯器視窗讓設定生效

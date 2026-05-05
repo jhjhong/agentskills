@@ -22,6 +22,7 @@
 | Skill | 說明 |
 |-------|------|
 | [git-commit-helper](./skills/git-commit-helper/) | AI 輔助生成標準化 Git Commit Message |
+| [llm-coding-guidelines](./skills/llm-coding-guidelines/) | 減少常見 LLM 編碼錯誤的行為準則 |
 
 ## 🚀 部署方式
 
